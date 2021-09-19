@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap');
+
+* , body , ::before , ::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+body{
+  font-family: 'Josefin Sans', sans-serif;
+  
+}
+:root{
+  --fristColor:#FF003C;
+  --secndeColor:#141517;
+}
+a{
+  text-decoration: none;
+}
+ul{
+  list-style: none;
+}
+
+/* Nav Bar */
+nav {
+  background: #fff;
+  width: 100%;
+  padding: 30px 40px;
+   /* to make elements inline */
+  display: flex;
+  /* space between elements */
+  justify-content: space-between;
+  align-items: center;
+}
+/* loge brand */
+nav .brand{
+  width: 25%;
+}
+
+nav .list{
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav .list .item{
+  position: relative;
+  padding: 13px 0 0;
+  font-size: 15px;
+  font-weight: 600;
+}
+ /* nav .list.item:hover a{
+  color:#FF003C ;
+} */
+.a:hover{
+  color: #f00;
+}
+
+/* Red HOT */
+
+nav .list .item:nth-child(4)::after{
+  content: 'HOT';
+  position: absolute;
+  background-color: var(--fristColor);
+  color: #fff;
+  padding: 3px 8px;
+  font-size: 12px;
+  border-radius: 8px;
+  top: -12px;
+  filter: drop-shadow(6px 6px 6px #ccc);
+  -webkit-filter: drop-shadow(6px 6px 6px rgb(209, 209, 209));
+}
+
+/* Drop DOWN LISTS */
+nav .list .item .dropdown{
+  position: absolute;
+  background: #fff;
+  width: 180px;
+  padding: 20px;
+  top: 69px;
+  border-top: 3px solid #ff003c;
+  border-radius: 8px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .3s ease-in;
+  filter: drop-shadow(2px 4px 6px #ccc);
+}
+nav .list .item:hover .dropdown{
+  opacity: 1;
+  visibility: visible;
+  top: 50px;
+}
+nav .list .item .dropdown::before{
+  content: '';
+  position: absolute;
+  top: -23px;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid #f00;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+}
+nav .list .item .dropdown .drop{
+  margin-bottom: 10px;
+  
+}
+nav .list .item a{
+  color: var(--secndeColor);
+}
+
+/* 3 Icons */
+nav .icons{
+  width: 25%;
+  text-align: right;
+}
+nav .icons a{
+  margin-right: 12px;
+  color: var(--secndeColor);
+  font-size: 20px;
+  
+}
+nav .icons a:hover{
+  color: var(--fristColor);
+}
